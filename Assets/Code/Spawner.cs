@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
     private float timeBtwSpawn;
     public float startTimeBtwSpawn;
     public float decreaseTime;
-    public float minTime = 0.001f;
+    public float minTime = 0.65f;
 
     private void Update()
     {
@@ -17,7 +17,8 @@ public class Spawner : MonoBehaviour
         {
             int rand = Random.Range(0, EnemyPattern.Length);
             GameObject pattern = EnemyPattern[rand];
-            Instantiate(pattern, transform.position, Quaternion.identity);
+            GameObject spawnedStuff = Instantiate(pattern, transform.position, Quaternion.identity);
+            spawnedStuff.SetActive(true);
             timeBtwSpawn = startTimeBtwSpawn;
             if (startTimeBtwSpawn > minTime)
                 startTimeBtwSpawn -= decreaseTime;

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour
+{
 
     public int damage = 1;
     public float speed;
@@ -10,11 +11,7 @@ public class Enemy : MonoBehaviour {
     private void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
-    
-        if (health<- 0)
-        {
 
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -25,12 +22,8 @@ public class Enemy : MonoBehaviour {
             other.GetComponent<Player>().health -= damage;
             Destroy(gameObject);
 
-            if (other.CompareTag("Player"))
-            {
-                // player takes damage 
-                other.GetComponent<Enemy>().health -= damage;
-                Destroy(gameObject);
-            }
-            
+           
+
         }
     }
+}

@@ -31,6 +31,16 @@ public class Enemy : MonoBehaviour {
                 other.GetComponent<Enemy>().health -= damage;
                 Destroy(gameObject);
             }
+            hjjguhkdfjghd
+                g
+
+                fgdfkugzfidugzdif
+                g
+                fd
+                g
+                fdgdfiugzdfiugzdf
+                df
+                gdfugfdz
             
         }
     }

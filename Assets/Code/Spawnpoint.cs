@@ -5,13 +5,10 @@ using UnityEngine;
 public class Spawnpoint : MonoBehaviour {
    
     public GameObject enemy;
-    
+
     void Start()
     {
-       Instantiate(enemy, transform.position, Quaternion.identity);
-    }
-
-   
-
-
+       GameObject instance = Instantiate(enemy, transform.position, Quaternion.identity);
+        instance.SetActive(true);
+    }   
 }

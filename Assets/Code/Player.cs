@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
     private Vector2 targetPos;
     public float Yincrements;
@@ -13,7 +12,8 @@ public class Player : MonoBehaviour {
     public int health;
     private void Update()
     {
-        if (health <= 0) {
+        if (health <= 0)
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
